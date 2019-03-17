@@ -4,6 +4,6 @@ After being attached to Python for couple of years I finally made my step into l
 
 Structure
 =========
--> problems are inside /src as modules
--> I install Chronos.Bench to benchmark the complexity of my implementations compared to the Haskell 'standard library'
--> I am using Stack as a package manager for Haskell, inside h99.cabal
+- problems are inside /src as modules
+- I install Chronos.Bench to benchmark the complexity of my implementations compared to the Haskell 'standard library'
+- I am using Stack as a package manager for Haskell, inside h99.cabal
