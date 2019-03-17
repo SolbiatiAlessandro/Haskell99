@@ -7,10 +7,10 @@ exampleList =
 
 myReverse :: [a] -> [a]
 myReverse xs = 
-    case xs of
-       [] -> [] 
-       [x] -> [x]
-       x:rest -> (myReverse rest) ++ [x]
+   foldl f [] xs
+   where 
+     f :: [a] -> a -> [a]
+     f curr x = x:curr
 
 
 -- testing utility
@@ -24,4 +24,5 @@ main :: IO ()
 main = do
   shouldBe 2 2
   shouldBe 1 1
+  shouldBe (myReverse exampleList) [2,1,3,7,5]
   print("Accepted")
