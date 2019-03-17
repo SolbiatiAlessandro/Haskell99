@@ -1,0 +1,75 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.1.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: e1425f399b8e02312ff86c645ba336a517347d1557203aa02b3986b0a6c7ffdd
+
+name:           h99
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/h99#readme>
+homepage:       https://github.com/githubuser/h99#readme
+bug-reports:    https://github.com/githubuser/h99/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2019 Author name here
+build-type:     Simple
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/h99
+
+library
+  exposed-modules:
+      Lib
+      P1
+      P2
+      P3
+      P4
+      P5
+  other-modules:
+      Paths_h99
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable h99-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_h99
+  hs-source-dirs:
+      ./.
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , h99
+  default-language: Haskell2010
+
+test-suite h99-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_h99
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , h99
+  default-language: Haskell2010
+
+benchmark bench
+  type: exitcode-stdio-1.0
+  main-is: Main.hs
+  other-modules:
+      Paths_h99
+  hs-source-dirs:
+      bench
+  build-depends:
+      base >=4.7 && <5
+    , chronos-bench
+    , h99
+  default-language: Haskell2010
